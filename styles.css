@@ -299,6 +299,14 @@ body::after {
 .card__media { position: relative; aspect-ratio: 4 / 4.4; overflow: hidden; background: var(--stone); }
 .card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.1s var(--ease), opacity .4s; }
 .card:hover .card__media img { transform: scale(1.06); }
+.card__media--art { background: var(--linen); }
+.card__art { display: block; width: 100%; height: 100%; transition: transform 1.1s var(--ease); }
+.card:hover .card__art { transform: scale(1.04); }
+.art__piece { fill: var(--paper); stroke: var(--ink); stroke-width: .45; }
+.art__fine { fill: none; stroke: var(--ink-soft); stroke-width: .3; }
+.art__label { font: 400 3.6px var(--f-body); letter-spacing: .14em; fill: var(--ink-soft); }
+.bag__art { display: block; width: 76px; height: 90px; background: var(--linen); }
+.bag__art .art__label { display: none; }
 .card__tag {
   position: absolute; left: .8rem; top: .8rem;
   font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
