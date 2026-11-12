@@ -4,36 +4,59 @@
 // Si se deja vacío, WhatsApp pedirá elegir el contacto al enviar.
 const WHATSAPP_NUMBER = "";
 
-const COLLECTIONS = { premium: "Premium Bedding", down: "Goose Down Feather", towel: "Towel Series" };
+const COLLECTIONS = { premium: "Premium Bedding", down: "Goose Down Feather", towel: "Towel Series", linen: "Ropa de cama" };
 
 // Catálogo. Productos con `variants` muestran selector de talla.
 const PRODUCTS = [
   { id: "pd", c: "premium", name: "Duvet Premium", tag: "Microfibra 400 g/m²",
     variants: [
-      { k: "King", size: "280 x 240 cm", price: 1938, img: "pd-king" },
-      { k: "Queen", size: "230 x 240 cm", price: 1613, img: "pd-queen" },
-      { k: "Individual", size: "180 x 230 cm", price: 1323, img: "pd-ind" },
+      { k: "King", size: "280 x 240 cm", price: 2519.24, img: "pd-king" },
+      { k: "Queen", size: "230 x 240 cm", price: 2016.00, img: "pd-queen" },
+      { k: "Individual", size: "180 x 230 cm", price: 1653.75, img: "pd-ind" },
     ] },
-  { id: "pp-king", c: "premium", name: "Almohada King Size", meta: "Microfibra 1,300 g · 50 x 90 cm", price: 492, img: "pp-king" },
-  { id: "pp-std", c: "premium", name: "Almohada Standard", meta: "Microfibra 1,050 g · 50 x 70 cm", price: 462, img: "pp-std" },
-  { id: "pp-euro", c: "premium", name: "Almohada Euro", meta: "Microfibra 1,200 g · 60 x 60 cm", price: 477, img: "pp-euro" },
-  { id: "pp-accent", c: "premium", name: "Almohada Accent", meta: "Microfibra 650 g · 30 x 50 cm", price: 409, img: "pp-accent" },
-  { id: "pp-lumbar", c: "premium", name: "Almohada Lumbar", meta: "Microfibra 900 g · 30 x 90 cm", price: 450, img: "pp-lumbar" },
+  { id: "pp-king", c: "premium", name: "Almohada King Size", meta: "Microfibra 1,300 g · 50 x 90 cm", price: 655.20, img: "pp-king" },
+  { id: "pp-std", c: "premium", name: "Almohada Standard", meta: "Microfibra 1,050 g · 50 x 70 cm", price: 614.88, img: "pp-std" },
+  { id: "pp-euro", c: "premium", name: "Almohada Euro", meta: "Microfibra 1,200 g · 60 x 60 cm", price: 635.04, img: "pp-euro" },
+  { id: "pp-accent", c: "premium", name: "Almohada Accent", meta: "Microfibra 650 g · 30 x 50 cm", price: 544.32, img: "pp-accent" },
+  { id: "pp-lumbar", c: "premium", name: "Almohada Lumbar", meta: "Microfibra 900 g · 30 x 90 cm", price: 599.76, img: "pp-lumbar" },
   { id: "dd", c: "down", name: "Duvet de Plumón", tag: "50% plumón · 233 TC",
     variants: [
-      { k: "King", size: "280 x 240 cm", price: 2258, img: "dd-king" },
-      { k: "Queen", size: "230 x 240 cm", price: 1900, img: "dd-queen" },
+      { k: "King", size: "280 x 240 cm", price: 2935.30, img: "dd-king" },
+      { k: "Queen", size: "230 x 240 cm", price: 2470.10, img: "dd-queen" },
     ] },
-  { id: "dp-king", c: "down", name: "Almohada King de Plumón", meta: "Relleno 1,600 g · 50 x 90 cm", price: 656, img: "dp-king" },
-  { id: "dp-std", c: "down", name: "Almohada Standard de Plumón", meta: "Relleno 1,200 g · 50 x 70 cm", price: 535, img: "dp-std" },
-  { id: "dp-euro", c: "down", name: "Almohada Euro de Plumón", meta: "Relleno 1,200 g · 60 x 60 cm", price: 556, img: "dp-euro" },
-  { id: "dp-accent", c: "down", name: "Almohada Accent de Plumón", meta: "Relleno 600 g · 30 x 50 cm", price: 353, img: "dp-accent" },
-  { id: "t-full", c: "towel", name: "Toalla de cuerpo completo", meta: "Terry 600–700 GSM · 160 x 80 cm", price: 537, img: "t-full" },
-  { id: "t-half", c: "towel", name: "Toalla de medio cuerpo", meta: "Terry 600–700 GSM · 140 x 70 cm", price: 510, img: "t-half" },
-  { id: "t-pool", c: "towel", name: "Toalla de piscina", meta: "Rayas · 150 x 80 cm", price: 624, img: "t-pool" },
-  { id: "t-hand", c: "towel", name: "Toalla de mano", meta: "Terry 600–700 GSM · 75 x 35 cm", price: 164, img: "t-hand" },
-  { id: "t-face", c: "towel", name: "Toalla de cara", meta: "Terry 600–700 GSM · 33 x 33 cm", price: 100, img: "t-face" },
-  { id: "t-mat", c: "towel", name: "Tapete de baño", meta: "Terry · 60 x 40 cm", price: 215, img: "t-mat" },
+  { id: "dp-king", c: "down", name: "Almohada King de Plumón", meta: "Relleno 1,600 g · 50 x 90 cm", price: 753.48, img: "dp-king" },
+  { id: "dp-std", c: "down", name: "Almohada Standard de Plumón", meta: "Relleno 1,200 g · 50 x 70 cm", price: 614.38, img: "dp-std" },
+  { id: "dp-euro", c: "down", name: "Almohada Euro de Plumón", meta: "Relleno 1,200 g · 60 x 60 cm", price: 666.79, img: "dp-euro" },
+  { id: "dp-accent", c: "down", name: "Almohada Accent de Plumón", meta: "Relleno 600 g · 30 x 50 cm", price: 405.72, img: "dp-accent" },
+  { id: "t-full", c: "towel", name: "Toalla de cuerpo completo", meta: "Terry 600–700 GSM · 160 x 80 cm", price: 644.11, img: "t-full" },
+  { id: "t-half", c: "towel", name: "Toalla de medio cuerpo", meta: "Terry 600–700 GSM · 140 x 70 cm", price: 571.54, img: "t-half" },
+  { id: "t-pool", c: "towel", name: "Toalla de piscina", meta: "Rayas · 150 x 80 cm", price: 665.28, img: "t-pool" },
+  { id: "t-hand", c: "towel", name: "Toalla de mano", meta: "Terry 600–700 GSM · 75 x 35 cm", price: 183.46, img: "t-hand" },
+  { id: "t-face", c: "towel", name: "Toalla de cara", meta: "Terry 600–700 GSM · 33 x 33 cm", price: 112.90, img: "t-face" },
+  { id: "t-mat", c: "towel", name: "Tapete de baño", meta: "Terry · 60 x 40 cm", price: 239.90, img: "t-mat" },
+  // Ropa de cama: sin fotografía, se dibuja a escala con `art` y `d` (ancho, largo, alto en cm).
+  { id: "lc-protector", c: "linen", art: "protector", name: "Protector de colchón", tag: "Tejido de punto",
+    variants: [
+      { k: "King", size: "180 x 200 x 30 cm", price: 498.96, d: [180, 200, 30] },
+      { k: "Queen", size: "150 x 200 x 30 cm", price: 430.92, d: [150, 200, 30] },
+      { k: "Individual", size: "120 x 200 x 30 cm", price: 385.56, d: [120, 200, 30] },
+    ] },
+  { id: "lc-cover", c: "linen", art: "cover", name: "Funda de duvet", tag: "100% algodón · 200 TC",
+    variants: [
+      { k: "King", size: "280 x 250 cm", price: 1054.87, d: [280, 250] },
+      { k: "Queen", size: "230 x 240 cm", price: 858.31, d: [230, 240] },
+    ] },
+  { id: "lc-sheet", c: "linen", art: "sheet", name: "Sábana plana",
+    variants: [
+      { k: "King", size: "250 x 280 cm", price: 725.76, d: [250, 280] },
+      { k: "Queen", size: "230 x 260 cm", price: 639.58, d: [230, 260] },
+      { k: "Individual", size: "200 x 230 cm", price: 503.50, d: [200, 230] },
+    ] },
+  { id: "lc-case", c: "linen", art: "case", name: "Funda de almohada", tag: "Línea High End",
+    variants: [
+      { k: "King", size: "50 x 90 cm", price: 163.30, d: [90, 50] },
+      { k: "Standard", size: "50 x 70 cm", price: 145.15, d: [70, 50] },
+    ] },
 ];
 
 // Medidas para la guía a escala (w × h en cm, horizontal).
@@ -57,17 +80,36 @@ const hasGsap = typeof window.gsap !== "undefined" && typeof window.ScrollTrigge
 /* ---------------- Shop grid ---------------- */
 const grid = $("#grid");
 
+// Dibujo de línea de la pieza, a escala dentro de su producto (todas las tallas comparten escala).
+function artSVG(p, v) {
+  const maxW = Math.max(...p.variants.map(x => x.d[0])), maxH = Math.max(...p.variants.map(x => x.d[1]));
+  const s = Math.min(64 / maxW, 66 / maxH);
+  const w = v.d[0] * s, h = v.d[1] * s, x = 50 - w / 2, y = 50 - h / 2;
+  let extra = "";
+  if (p.art === "protector") extra = `<rect x="${x + 3.5}" y="${y + 3.5}" width="${w - 7}" height="${h - 7}" rx="2" class="art__fine" stroke-dasharray="1.2 1.2"/>`;
+  if (p.art === "sheet") extra = `<line x1="${x}" x2="${x + w}" y1="${y + 4}" y2="${y + 4}" class="art__fine"/><line x1="${x}" x2="${x + w}" y1="${y + 5.6}" y2="${y + 5.6}" class="art__fine"/>`;
+  if (p.art === "cover") for (let bx = x + 5; bx < x + w - 3; bx += 6) extra += `<circle cx="${bx}" cy="${y + h - 3}" r=".8" class="art__fine"/>`;
+  if (p.art === "case") extra = `<line x1="${x + w - 7}" x2="${x + w - 7}" y1="${y}" y2="${y + h}" class="art__fine"/>`;
+  return `<svg class="card__art" viewBox="0 0 100 110" role="img" aria-label="${p.name} ${v.k}, ${v.size}">
+    <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${p.art === "protector" ? 3 : .6}" class="art__piece"/>${extra}
+    <text x="50" y="100" text-anchor="middle" class="art__label">${v.size.replace(/ x /g, " × ")}</text></svg>`;
+}
+
+function mediaHTML(p, v) {
+  return p.art ? artSVG(p, v) : `<img src="img/${v.img}.jpg" alt="${p.name}" loading="lazy">`;
+}
+
 function cardHTML(p) {
   const v = p.variants ? p.variants[0] : p;
-  const meta = p.variants ? `${p.tag} · ${v.size}` : p.meta;
+  const meta = p.variants ? [p.tag, v.size].filter(Boolean).join(" · ") : p.meta;
   const chips = p.variants
     ? `<div class="chips" role="group" aria-label="Talla">${p.variants.map((x, i) =>
         `<button type="button" class="chip" data-v="${i}" aria-pressed="${i === 0}">${x.k}</button>`).join("")}</div>`
     : "";
   return `
   <article class="card" data-c="${p.c}" data-id="${p.id}">
-    <div class="card__media" data-cursor="Añadir">
-      <img src="img/${v.img}.jpg" alt="${p.name}" loading="lazy">
+    <div class="card__media${p.art ? " card__media--art" : ""}" data-cursor="Añadir">
+      ${mediaHTML(p, v)}
       <span class="card__tag">${COLLECTIONS[p.c]}</span>
       <button type="button" class="card__add">Añadir a la bolsa</button>
     </div>
@@ -90,6 +132,7 @@ $("#cAll").textContent = counts.all;
 $("#cPremium").textContent = counts.premium;
 $("#cDown").textContent = counts.down;
 $("#cTowel").textContent = counts.towel;
+$("#cLinen").textContent = counts.linen;
 
 const selected = {}; // product id -> variant index
 
@@ -104,7 +147,8 @@ grid.addEventListener("click", e => {
     const v = p.variants[i];
     $$(".chip", card).forEach(c => c.setAttribute("aria-pressed", c === chip));
     $(".card__price", card).textContent = money(v.price);
-    $(".card__meta", card).textContent = `${p.tag} · ${v.size}`;
+    $(".card__meta", card).textContent = [p.tag, v.size].filter(Boolean).join(" · ");
+    if (p.art) { $(".card__art", card).outerHTML = artSVG(p, v); return; }
     const img = $(".card__media img", card);
     img.style.opacity = 0;
     setTimeout(() => { img.src = `img/${v.img}.jpg`; img.onload = () => img.style.opacity = 1; }, 220);
@@ -130,7 +174,7 @@ $$(".filter").forEach(b => b.addEventListener("click", () => setFilter(b.dataset
 $$("[data-filter]").forEach(a => a.addEventListener("click", () => setFilter(a.dataset.filter)));
 
 /* ---------------- Bag ---------------- */
-const STORE_KEY = "lp-bag-v1";
+const STORE_KEY = "lp-bag-v2"; // v2: precios actualizados
 let bag = [];
 try { bag = JSON.parse(localStorage.getItem(STORE_KEY)) || []; } catch (_) { bag = []; }
 const save = () => { try { localStorage.setItem(STORE_KEY, JSON.stringify(bag)); } catch (_) {} };
@@ -142,7 +186,7 @@ function addToBag(p, vi) {
   const detail = p.variants ? v.size : p.meta;
   const line = bag.find(x => x.key === key);
   if (line) line.q++;
-  else bag.push({ key, name, detail, price: v.price, img: v.img, c: p.c, q: 1 });
+  else bag.push({ key, name, detail, price: v.price, img: v.img, pid: p.id, vi, c: p.c, q: 1 });
   save(); renderBag();
   const count = $("#bagCount");
   count.classList.remove("bump"); void count.offsetWidth; count.classList.add("bump");
@@ -156,9 +200,13 @@ function renderBag() {
   $("#bagTotal").textContent = money(total);
   $("#bagEmpty").hidden = bag.length > 0;
   $("#bagFoot").hidden = bag.length === 0;
+  const thumb = x => {
+    const p = PRODUCTS.find(y => y.id === x.pid);
+    return p && p.art ? `<span class="bag__art">${artSVG(p, p.variants[x.vi])}</span>` : `<img src="img/${x.img}.jpg" alt="">`;
+  };
   $("#bagItems").innerHTML = bag.map(x => `
     <li class="bag__item" data-key="${x.key}">
-      <img src="img/${x.img}.jpg" alt="">
+      ${thumb(x)}
       <div>
         <h3>${x.name}</h3>
         <p>${COLLECTIONS[x.c]} · ${x.detail}</p>
